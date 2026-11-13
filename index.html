@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="흙덩이 서거름이 민들레씨앗을 만나 꽃피우는 60초 애니메이션">
+<meta property="og:title" content="서거름과 민들레씨앗">
+<meta property="og:image" content="poster.jpg">
+<title>서거름과 민들레씨앗</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&display=swap">
+<style>*{box-sizing:border-box}body{margin:0}</style>
+<style>
+  /* Layout: one centred storybook column — title, the film, a short synopsis. */
+  :root {
+    --bg: #f6efe2;
+    --fg: #3f2a1a;
+    --muted: #7a5e44;
+    --card: #fffaf0;
+    --accent: #e8a300;
+    --line: #e2d3b8;
+    --font-display: "Jua", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    --font-body: "Gowun Dodum", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1d1712; --fg: #f3e7d3; --muted: #c2a888; --card: #2a211a; --accent: #ffc53d; --line: #3d3127;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1d1712; --fg: #f3e7d3; --muted: #c2a888; --card: #2a211a; --accent: #ffc53d; --line: #3d3127;
+    color-scheme: dark;
+  }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.7;
+  }
+  main {
+    max-width: 980px;
+    margin: 0 auto;
+    padding-block: 40px 56px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    display: grid;
+    gap: 22px;
+  }
+  header { display: grid; gap: 4px; text-align: center; }
+  .eyebrow { font-size: 14px; letter-spacing: 0.08em; color: var(--muted); }
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(32px, 6vw, 52px);
+    line-height: 1.2;
+    margin: 0;
+    text-wrap: balance;
+  }
+  h1 span { color: var(--accent); }
+  .film {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 10px;
+    box-shadow: 0 8px 0 rgba(60, 40, 20, 0.12);
+  }
+  video {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    background: #000;
+  }
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px 18px;
+    font-size: 14px;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .story { max-width: 62ch; margin: 0 auto; display: grid; gap: 10px; }
+  .story p { margin: 0; }
+  .tagline { text-align: center; font-family: var(--font-display); font-size: 22px; color: var(--accent); margin: 6px 0 0; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="eyebrow">60초 짧은 애니메이션</div>
+    <h1>서거름과 <span>민들레씨앗</span></h1>
+  </header>
+
+  <div class="film">
+    <video id="film" src="geoream.mp4" poster="poster.jpg" controls playsinline preload="metadata"></video>
+  </div>
+
+  <div class="meta">
+    <span>1:00</span><span>1920×1080</span><span>한국어 내레이션</span><span>소리를 켜고 보세요</span>
+  </div>
+
+  <section class="story">
+    <p>흙덩이 서거름은 비가 와도 바람이 불어도 한 걸음씩 걸었어요. 길은 미끄럽고, 아무도 거름이를 반겨 주지 않았죠.</p>
+    <p>진흙탕에 주저앉은 날, 바람을 타고 작은 민들레씨앗이 날아와 말했어요. "너… 참 따뜻하다." 둘이 함께 걷자 하늘이 맑게 개었어요.</p>
+    <p>긴 여행에 지친 씨앗이 내려앉자, 이번엔 거름이가 씨앗을 품었어요. 그리고 노란 민들레가 피어났어요.</p>
+    <p class="tagline">모든 걸음은 누군가를 꽃피워요</p>
+  </section>
+</main>
+</body>
+</html>
